@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Feelae</string>
+    <string name="call_a_psychologist">Appeller un psychologue</string>
+    <string name="add_psy_text">Ajouter psy</string>
+    <string name="profile_button">Mon profil</string>
+    <string name="monitoring_button">mon suivi</string>
+    <string name="appname">AppName</string>
+    <string name="waiting_room_cancel_button_text">Annuler</string>
 </resources>
