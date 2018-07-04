@@ -10,8 +10,8 @@ import com.daprlabs.aaron.swipedeck.SwipeDeck
 import com.feelae.feelae.Constants
 import com.feelae.feelae.R
 import com.feelae.feelae.adapters.SwipeDeckAdapter
-import com.feelae.feelae.http.APIController
-import com.feelae.feelae.http.ServiceVolley
+import com.feelae.feelae.services.APIController
+import com.feelae.feelae.services.ServiceVolley
 import com.feelae.feelae.models.Hints
 import com.feelae.feelae.fragments.LoaderFragment
 import kotlinx.android.synthetic.main.activity_waiting_room.*

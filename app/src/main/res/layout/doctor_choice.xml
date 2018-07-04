@@ -22,17 +22,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/available_doctor_button"
+            android:id="@+id/my_doctors_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="Un médecin disponible"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:text="Mes médecins traitants"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/call_doctor_modal_text" />
 
         <TextView
             android:id="@+id/ou_dialog_text"
@@ -51,17 +51,17 @@
             app:layout_constraintTop_toBottomOf="@+id/my_doctors_button" />
 
         <Button
-            android:id="@+id/my_doctors_button"
+            android:id="@+id/available_doctor_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Mes médecins traitants"
+            android:text="Un médecin disponible"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/call_doctor_modal_text" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/call_doctor_modal_text"

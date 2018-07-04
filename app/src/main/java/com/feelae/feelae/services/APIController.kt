@@ -1,4 +1,4 @@
-package com.feelae.feelae.http
+package com.feelae.feelae.services
 
 import org.json.JSONArray
 import org.json.JSONObject

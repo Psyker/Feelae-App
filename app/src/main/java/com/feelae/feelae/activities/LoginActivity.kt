@@ -14,8 +14,8 @@ import android.support.v7.widget.AppCompatTextView
 import com.feelae.feelae.Constants
 import com.feelae.feelae.R
 import com.feelae.feelae.helpers.PreferenceHelper
-import com.feelae.feelae.http.APIController
-import com.feelae.feelae.http.ServiceVolley
+import com.feelae.feelae.services.APIController
+import com.feelae.feelae.services.ServiceVolley
 import com.feelae.feelae.utils.InputValidator
 import org.json.JSONObject
 import com.feelae.feelae.helpers.PreferenceHelper.set
