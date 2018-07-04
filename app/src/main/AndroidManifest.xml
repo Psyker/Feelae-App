@@ -20,6 +20,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".WaitingRoomActivity"/>
+        <activity android:name=".CallActivity"></activity>
     </application>
 
 </manifest>
