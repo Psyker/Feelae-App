@@ -37,9 +37,9 @@ class ServiceVolley : ServiceInterface {
     }
 
     override fun get(path: String, token: String?, completionHandler: (response: JSONArray?) -> Unit) {
-        // https://developer.android.com/training/volley/simple
         val jsonObjReq = object : JsonArrayRequest(Request.Method.GET, Constants.API_URL + path, null,
                 Response.Listener<JSONArray> { response ->
+                    Log.d(TAG, "/get request OK! Response: $response")
                     completionHandler(response)
                 },
                 Response.ErrorListener { error ->
@@ -53,6 +53,7 @@ class ServiceVolley : ServiceInterface {
                 return headers
             }
         }
+        Log.d("lol",jsonObjReq.toString())
         BackendVolley.instance?.addToRequestQueue(jsonObjReq, TAG)
     }
 }
