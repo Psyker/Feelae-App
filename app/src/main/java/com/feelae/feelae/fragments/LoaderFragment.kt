@@ -1,4 +1,4 @@
-package com.feelae.feelae.shared
+package com.feelae.feelae.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

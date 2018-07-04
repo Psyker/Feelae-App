@@ -21,6 +21,7 @@
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".WaitingRoomActivity"/>
         <activity android:name=".CallActivity"></activity>
+        <activity android:name=".DoctorChoiceActivity"></activity>
     </application>
 
 </manifest>
