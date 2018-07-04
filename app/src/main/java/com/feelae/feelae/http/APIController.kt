@@ -15,4 +15,5 @@ class APIController constructor(serviceInjection: ServiceInterface) : ServiceInt
     override fun get(path: String, token: String?, completionHandler: (response: JSONArray?) -> Unit) {
         service.get(path, token, completionHandler)
     }
+
 }
