@@ -1,7 +1,8 @@
-package com.feelae.feelae
+package com.feelae.feelae.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.feelae.feelae.R
 import com.feelae.feelae.fragments.ChoiceModalFragment
 import kotlinx.android.synthetic.main.activity_main.*
 

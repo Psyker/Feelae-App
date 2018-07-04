@@ -1,4 +1,4 @@
-package com.feelae.feelae
+package com.feelae.feelae.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -11,7 +11,8 @@ import android.support.design.widget.TextInputLayout
 import android.support.v4.widget.NestedScrollView
 import android.support.v7.widget.AppCompatButton
 import android.support.v7.widget.AppCompatTextView
-import android.util.Log
+import com.feelae.feelae.Constants
+import com.feelae.feelae.R
 import com.feelae.feelae.helpers.PreferenceHelper
 import com.feelae.feelae.http.APIController
 import com.feelae.feelae.http.ServiceVolley
@@ -93,20 +94,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 prefs[Constants.TOKEN] = response.get("token")
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                emptyInputEditText()
             } else {
                 Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show()
             }
         }
-//        if (databaseHelper!!.checkUser(textInputEditTextEmail.text.toString().trim { it <= ' ' }, textInputEditTextPassword.text.toString().trim { it <= ' ' })) {
-//            val accountsIntent = Intent(this, MainActivity::class.java)
-//            accountsIntent.putExtra("EMAIL", textInputEditTextEmail.text.toString().trim { it <= ' ' })
-//            emptyInputEditText()
-//            startActivity(accountsIntent)
-//        } else {
-//
-//            // Snack Bar to show success message that record is wrong
-//            Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show()
-//        }
     }
 
     private fun emptyInputEditText() {
