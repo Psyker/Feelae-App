@@ -30,7 +30,8 @@ androidExtensions {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
@@ -43,4 +44,5 @@ dependencies {
     implementation 'com.beust:klaxon:3.0.1'
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.github.kikoso:SwipeableCards:1.1-RELEASE@aar'
+    implementation 'com.android.support:design:27.1.1'
 }
