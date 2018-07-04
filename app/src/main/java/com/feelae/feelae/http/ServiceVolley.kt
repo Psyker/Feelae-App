@@ -53,7 +53,6 @@ class ServiceVolley : ServiceInterface {
                 return headers
             }
         }
-        Log.d("lol",jsonObjReq.toString())
         BackendVolley.instance?.addToRequestQueue(jsonObjReq, TAG)
     }
 }

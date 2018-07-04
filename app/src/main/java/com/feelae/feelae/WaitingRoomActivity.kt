@@ -10,7 +10,7 @@ import com.daprlabs.aaron.swipedeck.SwipeDeck
 import com.feelae.feelae.http.APIController
 import com.feelae.feelae.http.ServiceVolley
 import com.feelae.feelae.model.Hints
-import com.feelae.feelae.shared.LoaderFragment
+import com.feelae.feelae.fragments.LoaderFragment
 import kotlinx.android.synthetic.main.activity_waiting_room.*
 
 
@@ -57,6 +57,6 @@ class WaitingRoomActivity : AppCompatActivity() {
     private fun redirectToCallPageAfterDelay(){
         Handler().postDelayed({
             startActivity(Intent(this, CallActivity::class.java))
-        }, 5000)
+        }, Constants.SPLASH_TIME)
     }
 }

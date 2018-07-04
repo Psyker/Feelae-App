@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".WaitingRoomActivity" />
-        <activity android:name=".CallActivity"></activity>
+        <activity android:name=".CallActivity" />
+        <activity android:name=".DoctorChoiceActivity"></activity>
     </application>
 
 </manifest>
