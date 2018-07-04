@@ -24,9 +24,7 @@ class ChoiceModalFragment : DialogFragment() {
             mainActivity.closeChoiceModal()
         }
 
-        my_doctors_button.setOnClickListener{
-            //TODO
-        }
+        my_doctors_button.isEnabled = false
 
         available_doctor_button.setOnClickListener{
             startActivity(Intent(activity, DoctorChoiceActivity::class.java))
