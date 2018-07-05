@@ -95,7 +95,7 @@
             android:id="@+id/close_modal_text"
             android:layout_width="26dp"
             android:layout_height="26dp"
-            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:src="@drawable/ic_croix"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
