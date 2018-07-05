@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Feelae</string>
-    <string name="call_a_psychologist">Appeller un médecin</string>
-    <string name="add_psy_text">Ajouter un docteur</string>
+    <string name="call_a_doctor_text">Appeller un médecin</string>
+    <string name="add_psy_text">Mes docteurs</string>
     <string name="profile_button">Mon profil</string>
     <string name="monitoring_button">Mon suivi</string>
     <string name="waiting_room_cancel_button_text">Annuler</string>
@@ -25,4 +25,15 @@
     <string name="hint_forgot_password">Mot de passe oublié ?</string>
     <string name="hint_firstname">PRÉNOM</string>
     <string name="hint_lastname">NOM</string>
+    <string name="nos_professionels_de_sant_disponible_24h_24">Nos professionels de santé disponible 24h/24</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="consultez_un_m_decin_ou_que_vous_soyez">Consultez un médecin ou que vous soyez</string>
+    <string name="mes_m_decins_traitants">Mes médecins traitants</string>
+    <string name="ou">ou</string>
+    <string name="un_m_decin_disponible">Un médecin disponible</string>
+    <string name="x">X</string>
+    <string name="appeller_mon_m_decin">Appeller mon médecin</string>
 </resources>

@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        call_psy_button.setOnClickListener {
+        call_doctor_button.setOnClickListener {
             showChoiceModal()
         }
     }

@@ -39,7 +39,6 @@ class RegisterActivity: AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         prefs = PreferenceHelper.defaultPrefs(this)
-        supportActionBar!!.hide()
         initViews()
         initListeners()
         initObjects()

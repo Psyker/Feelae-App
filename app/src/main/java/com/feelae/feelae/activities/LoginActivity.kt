@@ -33,7 +33,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         prefs = PreferenceHelper.defaultPrefs(this)
         setContentView(R.layout.activity_login)
-        supportActionBar!!.hide()
         initViews()
         initListeners()
         initObjects()
