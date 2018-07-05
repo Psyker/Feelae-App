@@ -24,18 +24,19 @@
         app:layout_constraintVertical_bias="0.498">
 
         <Button
-            android:id="@+id/my_doctors_button"
+            android:id="@+id/available_doctor_button"
             android:layout_width="match_parent"
             android:layout_height="78dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:background="@color/lightBlue"
-            android:text="@string/mes_m_decins_traitants"
+            android:text="@string/un_m_decin_disponible"
             android:textColor="@color/mediumBlue"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ou_dialog_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/call_doctor_modal_text" />
 
@@ -51,27 +52,29 @@
             android:text="@string/ou"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/available_doctor_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/my_doctors_button" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.591" />
 
         <Button
-            android:id="@+id/available_doctor_button"
+            android:id="@+id/my_doctors_button"
             android:layout_width="match_parent"
             android:layout_height="78dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:background="@color/lightBlue"
-            android:text="@string/un_m_decin_disponible"
+            android:text="@string/mes_m_decins_traitants"
             android:textColor="@color/mediumBlue"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ou_dialog_text"
+            app:layout_constraintVertical_bias="0.813" />
 
         <TextView
             android:id="@+id/call_doctor_modal_text"
@@ -79,22 +82,19 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
             android:text="@string/appeller_mon_m_decin"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/close_modal_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
