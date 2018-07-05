@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_symptoms.*
 class SymptomsActivity : AppCompatActivity() {
     private var mSymptomNames = emptyList<String>()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         getSymptoms()
@@ -28,6 +29,7 @@ class SymptomsActivity : AppCompatActivity() {
         symptoms_next_button.setOnClickListener {
             val intent = Intent(this, WaitingRoomActivity::class.java)
             intent.putExtra("Symptoms", multiAutoCompleteTextView.text)
+            intent.putExtra("specialization", this.intent.extras.getString("specialization_EXTRA"))
             startActivity(intent)
         }
 

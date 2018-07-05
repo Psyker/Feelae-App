@@ -32,9 +32,9 @@ class SpecializationItem(val specialization: Specialization) : AbstractItem<Spec
             UIUtils.setBackground(itemView, FastAdapterUIUtils.getSelectableBackground(ctx, ContextCompat.getColor(ctx,R.color.mediumBlue), true))
             val specialization = item?.specialization
             itemView.specialization_text.text = specialization?.name
-            if (specialization != null) {
-                itemView.specialization_image.setImageResource(specialization.image)
-            }
+            val image = specialization!!.image
+            itemView.specialization_image.setImageResource(image!!)
+
         }
     }
 }
