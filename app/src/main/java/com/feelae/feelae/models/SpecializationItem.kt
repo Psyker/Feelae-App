@@ -1,5 +1,8 @@
 package com.feelae.feelae.models
 
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
+import android.support.v4.content.ContextCompat
 import android.view.View
 import com.feelae.feelae.R
 import com.mikepenz.fastadapter.FastAdapter
@@ -28,7 +31,7 @@ class SpecializationItem(val specialization: Specialization) : AbstractItem<Spec
 
         override fun bindView(item: SpecializationItem?, payloads: MutableList<Any>?) {
             val ctx = itemView.context
-            UIUtils.setBackground(itemView, FastAdapterUIUtils.getSelectableBackground(ctx, ctx.resources.getColor(R.color.colorPrimaryDark), true))
+            UIUtils.setBackground(itemView, FastAdapterUIUtils.getSelectableBackground(ctx, ContextCompat.getColor(ctx,R.color.mediumBlue), true))
             val specialization = item?.specialization
             itemView.specialization_text.text = specialization?.name
             if (specialization != null) {
