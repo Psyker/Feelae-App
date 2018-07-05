@@ -8,7 +8,7 @@
     <string name="hint_name">Name</string>
     <string name="hint_email">ADRESSE EMAIL</string>
     <string name="hint_password">MOT DE PASSE</string>
-    <string name="hint_confirm_password">Confirmer le mot de passe</string>
+    <string name="hint_confirm_password">CONFIRMER LE MOT DE PASSE</string>
     <string name="text_login">Se connecter</string>
     <string name="text_register">S\'enregistrer</string>
     <string name="error_message_email">Entrer un email valide</string>
