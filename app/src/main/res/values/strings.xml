@@ -35,7 +35,11 @@
     <string name="appeller_mon_m_decin">Appeller mon médecin</string>
     <string name="speciality">speciality</string>
     <string name="annuler">annuler</string>
-    <string name="suivant">Suivant</string>
     <string name="quel_est_le_motif_de_votre_appel">Quel est le motif de votre appel ?</string>
     <string name="veuillez_choisir_le_motif_de_votre_appel_afin_que_nous_vous_mettions_en_relations_avec_un_sp_cialiste_disponible">Veuillez choisir le motif de votre appel afin que nous vous mettions en relations avec un spécialiste disponible</string>
+    <string name="suivant">Suivant</string>
+    <string name="quels_sont_vos_symptomes">Quels sont vos symptomes ?</string>
+    <string name="veuillez_utliser_la_bare_de_recherche_pour_ajouter_un_symptome">Veuillez utliser la bare de recherche pour ajouter un symptome</string>
+    <string name="mal_de_t_te_jambe">Mal de tête, jambe, etc…</string>
+    <string name="terminer">terminer</string>
 </resources>
