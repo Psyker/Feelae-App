@@ -19,7 +19,7 @@ import com.feelae.feelae.utils.InputValidator
 import org.json.JSONObject
 
 class RegisterActivity: AppCompatActivity(), View.OnClickListener {
-    lateinit private var prefs: SharedPreferences
+    private lateinit var prefs: SharedPreferences
     private lateinit var textInputLayoutFirstname: TextInputLayout
     private lateinit var textInputLayoutLastname: TextInputLayout
     private lateinit var textInputLayoutEmail: TextInputLayout

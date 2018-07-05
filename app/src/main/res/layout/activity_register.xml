@@ -9,7 +9,6 @@
     android:paddingRight="20dp"
     android:paddingTop="20dp"
     tools:context=".activities.LoginActivity">
-    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView2"
@@ -85,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <android.support.design.widget.TextInputEditEmail
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/textInputEditTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,7 +102,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <android.support.design.widget.TextInputEditPassword
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/textInputEditTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
