@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Specialization(var name: String, var imageUri: String) : Parcelable
+data class Specialization(var name: String, var image: Int) : Parcelable

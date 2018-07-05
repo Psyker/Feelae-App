@@ -36,13 +36,13 @@
             android:layout_height="300dp" />
 
         <Button
-            android:id="@+id/cancel_button"
+            android:id="@+id/specialization_list_cancel_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="annuler" />
 
         <Button
-            android:id="@+id/next_button"
+            android:id="@+id/specialization_list_next_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Suivant" />

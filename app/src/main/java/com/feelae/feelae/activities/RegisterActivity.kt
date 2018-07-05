@@ -20,7 +20,7 @@ import com.feelae.feelae.services.ServiceVolley
 import com.feelae.feelae.utils.InputValidator
 import org.json.JSONObject
 
-class RegisterActivity: AppCompatActivity(), View.OnClickListener {
+class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var prefs: SharedPreferences
     private lateinit var nestedScrollView: NestedScrollView
     private lateinit var textInputLayoutFirstname: TextInputLayout

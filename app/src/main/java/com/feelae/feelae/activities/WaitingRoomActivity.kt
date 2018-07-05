@@ -21,6 +21,7 @@ class WaitingRoomActivity : AppCompatActivity() {
     private val loaderFragment: LoaderFragment by lazy {
         LoaderFragment()
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_waiting_room)
@@ -33,7 +34,7 @@ class WaitingRoomActivity : AppCompatActivity() {
         redirectToCallPageAfterDelay()
     }
 
-    private fun getHints(){
+    private fun getHints() {
         val cardStack = findViewById<View>(R.id.swipe_deck) as SwipeDeck
         val service = ServiceVolley()
         val apiController = APIController(service)
@@ -49,15 +50,15 @@ class WaitingRoomActivity : AppCompatActivity() {
         }
     }
 
-    private fun showLoader(){
+    private fun showLoader() {
         supportFragmentManager.beginTransaction().add(R.id.loader_container_layout, loaderFragment).commit()
     }
 
-    private fun hideLoader(){
+    private fun hideLoader() {
         supportFragmentManager.beginTransaction().remove(loaderFragment).commit()
     }
 
-    private fun redirectToCallPageAfterDelay(){
+    private fun redirectToCallPageAfterDelay() {
         Handler().postDelayed({
             startActivity(Intent(this, CallActivity::class.java))
         }, Constants.SPLASH_TIME)

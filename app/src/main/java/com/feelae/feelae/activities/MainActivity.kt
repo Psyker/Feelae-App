@@ -10,16 +10,17 @@ class MainActivity : AppCompatActivity() {
     private val choiceModalFragment: ChoiceModalFragment by lazy {
         ChoiceModalFragment()
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        call_psy_button.setOnClickListener{
+        call_psy_button.setOnClickListener {
             showChoiceModal()
         }
     }
 
-    fun closeChoiceModal(){
+    fun closeChoiceModal() {
         supportFragmentManager.beginTransaction().remove(choiceModalFragment).commit()
     }
 

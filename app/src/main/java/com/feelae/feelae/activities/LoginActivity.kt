@@ -22,7 +22,7 @@ import com.feelae.feelae.helpers.PreferenceHelper.set
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit private var prefs: SharedPreferences
+    private lateinit var prefs: SharedPreferences
     private lateinit var nestedScrollView: NestedScrollView
     private lateinit var textInputLayoutEmail: TextInputLayout
     private lateinit var textInputLayoutPassword: TextInputLayout
