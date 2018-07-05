@@ -1,4 +1,4 @@
-package com.feelae.feelae.model
+package com.feelae.feelae.models
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

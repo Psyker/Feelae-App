@@ -1,4 +1,4 @@
-package com.feelae.feelae
+package com.feelae.feelae.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.feelae.feelae.model.Hints
+import com.feelae.feelae.R
+import com.feelae.feelae.models.Hints
 import com.squareup.picasso.Picasso
 
 

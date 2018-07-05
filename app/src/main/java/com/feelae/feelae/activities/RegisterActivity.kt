@@ -1,4 +1,4 @@
-package com.feelae.feelae
+package com.feelae.feelae.activities
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,17 +10,18 @@ import android.support.v4.widget.NestedScrollView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.AppCompatButton
 import android.support.v7.widget.AppCompatTextView
-import android.util.Log
 import android.view.View
+import com.feelae.feelae.Constants
+import com.feelae.feelae.R
 import com.feelae.feelae.helpers.PreferenceHelper
 import com.feelae.feelae.helpers.PreferenceHelper.set
-import com.feelae.feelae.http.APIController
-import com.feelae.feelae.http.ServiceVolley
+import com.feelae.feelae.services.APIController
+import com.feelae.feelae.services.ServiceVolley
 import com.feelae.feelae.utils.InputValidator
 import org.json.JSONObject
 
-class RegisterActivity: AppCompatActivity(), View.OnClickListener {
-    lateinit private var prefs: SharedPreferences
+class RegisterActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var prefs: SharedPreferences
     private lateinit var nestedScrollView: NestedScrollView
     private lateinit var textInputLayoutFirstname: TextInputLayout
     private lateinit var textInputLayoutLastname: TextInputLayout
@@ -88,6 +89,7 @@ class RegisterActivity: AppCompatActivity(), View.OnClickListener {
     }
 
     private fun register() {
+        // TODO:  https://proandroiddev.com/easy-edittext-content-validation-with-kotlin-316d835d25b3
         if (!inputValidator.isInputFilled(textInputEditTextFirstname, textInputLayoutFirstname, getString(R.string.error_message_name))) {
             return
         }
@@ -128,26 +130,6 @@ class RegisterActivity: AppCompatActivity(), View.OnClickListener {
                 emptyInputEditText()
             }
         }
-
-//        if (!databaseHelper!!.checkUser(textInputEditTextEmail.text.toString().trim())) {
-//
-//            var user = User(name = textInputEditTextName.text.toString().trim(),
-//                    email = textInputEditTextEmail.text.toString().trim(),
-//                    password = textInputEditTextPassword.text.toString().trim())
-//
-//            databaseHelper!!.addUser(user)
-//
-//            // Snack Bar to show success message that record saved successfully
-//            Snackbar.make(nestedScrollView, getString(R.string.success_message), Snackbar.LENGTH_LONG).show()
-//            emptyInputEditText()
-//
-//
-//        } else {
-//            // Snack Bar to show error message that record already exists
-//            Snackbar.make(nestedScrollView, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show()
-//        }
-
-
     }
 
     private fun emptyInputEditText() {

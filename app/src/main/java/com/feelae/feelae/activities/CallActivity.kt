@@ -1,8 +1,9 @@
-package com.feelae.feelae
+package com.feelae.feelae.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.feelae.feelae.R
 import kotlinx.android.synthetic.main.activity_call.*
 
 class CallActivity : AppCompatActivity() {

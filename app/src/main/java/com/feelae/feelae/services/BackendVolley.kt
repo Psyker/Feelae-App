@@ -1,4 +1,4 @@
-package com.feelae.feelae.http
+package com.feelae.feelae.services
 
 import android.app.Application;
 import android.text.TextUtils

@@ -6,8 +6,8 @@ import android.support.v4.app.DialogFragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.feelae.feelae.DoctorChoiceActivity
-import com.feelae.feelae.MainActivity
+import com.feelae.feelae.activities.SpecializationListActivity
+import com.feelae.feelae.activities.MainActivity
 import com.feelae.feelae.R
 import kotlinx.android.synthetic.main.doctor_choice.*
 
@@ -27,7 +27,7 @@ class ChoiceModalFragment : DialogFragment() {
         my_doctors_button.isEnabled = false
 
         available_doctor_button.setOnClickListener{
-            startActivity(Intent(activity, DoctorChoiceActivity::class.java))
+            startActivity(Intent(activity, SpecializationListActivity::class.java))
         }
     }
 
