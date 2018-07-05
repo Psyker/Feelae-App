@@ -1,27 +1,33 @@
 package com.feelae.feelae.activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
+import com.beust.klaxon.Klaxon
 import com.feelae.feelae.R
+import com.feelae.feelae.helpers.PreferenceHelper
 import com.feelae.feelae.models.SpecializationItem
 import com.feelae.feelae.models.Specialization
+import com.feelae.feelae.services.APIController
+import com.feelae.feelae.services.ServiceVolley
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter.items
 import kotlinx.android.synthetic.main.activity_specialization_list.*
 
-
 class SpecializationListActivity : AppCompatActivity() {
-    private var mSelectedSpecialization: Specialization? = null
+    private lateinit var prefs: SharedPreferences
+    private lateinit var mSelectedSpecialization: String
     private lateinit var mFastAdapter: FastAdapter<SpecializationItem>
     private lateinit var mItemAdapter: ItemAdapter<SpecializationItem>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_specialization_list)
+        prefs = PreferenceHelper.defaultPrefs(this)
         mItemAdapter = items()
         specialization_list_next_button.isEnabled = false
         mFastAdapter = FastAdapter.with(mItemAdapter)
@@ -40,7 +46,7 @@ class SpecializationListActivity : AppCompatActivity() {
         }
 
         mFastAdapter.withOnClickListener({ _, _, item, _ ->
-            mSelectedSpecialization = item.specialization
+            mSelectedSpecialization = item.specialization.slug
             specialization_list_next_button.isEnabled = true
             completionProgressBar.progress = 50
             true
@@ -49,15 +55,25 @@ class SpecializationListActivity : AppCompatActivity() {
     }
 
     private fun getSpecializations() {
-        val list: ArrayList<Specialization> = ArrayList()
-        list.add(Specialization("Médecine générale", R.drawable.ic_generaliste))
-        list.add(Specialization("Gynécologie", R.drawable.ic_gynecologie))
-        list.add(Specialization("Dermatologie", R.drawable.ic_dermatologie))
-        list.add(Specialization("Nutrition", R.drawable.ic_nutrition))
-        list.add(Specialization("Pédiatrie", R.drawable.ic_pediatrie))
-        list.add(Specialization("Psychologie", R.drawable.ic_psychologie))
-        list.add(Specialization("Dentaire", R.drawable.ic_dentaire))
-        list.add(Specialization("Opthalmologie", R.drawable.ic_ophtalmologie))
-        mItemAdapter.add(list.map { SpecializationItem(it) })
+        val service = ServiceVolley()
+        val apiController = APIController(service)
+        apiController.get("specializations", prefs.getString("token", null)) { response ->
+            if (response != null) {
+                val result = Klaxon().parseArray<Specialization>(response.toString())
+                result!!.forEach { it ->
+                    when {
+                        it.slug == "generaliste" -> it.image = R.drawable.ic_generaliste
+                        it.slug == "gynecologie" -> it.image = R.drawable.ic_gynecologie
+                        it.slug == "dermatologie" -> it.image = R.drawable.ic_dermatologie
+                        it.slug == "nutrition" -> it.image = R.drawable.ic_nutrition
+                        it.slug == "pediatrie" -> it.image = R.drawable.ic_pediatrie
+                        it.slug == "psychologie" -> it.image = R.drawable.ic_pediatrie
+                        it.slug == "dentaire" -> it.image = R.drawable.ic_dentaire
+                        it.slug == "ophtamologie" -> it.image = R.drawable.ic_ophtalmologie
+                    }
+                }
+                mItemAdapter.add(result.map { SpecializationItem(it) })
+            }
+        }
     }
 }
