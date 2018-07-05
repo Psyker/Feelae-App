@@ -1,7 +1,5 @@
 package com.feelae.feelae.models
 
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.support.v4.content.ContextCompat
 import android.view.View
 import com.feelae.feelae.R
