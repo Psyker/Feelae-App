@@ -5,10 +5,8 @@ import android.view.View
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.TextInputEditText
 import android.support.design.widget.TextInputLayout
-import android.support.v4.widget.NestedScrollView
 import android.support.v7.widget.AppCompatButton
 import android.support.v7.widget.AppCompatTextView
 import com.feelae.feelae.Constants
@@ -23,7 +21,6 @@ import com.feelae.feelae.helpers.PreferenceHelper.set
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var prefs: SharedPreferences
-    private lateinit var nestedScrollView: NestedScrollView
     private lateinit var textInputLayoutEmail: TextInputLayout
     private lateinit var textInputLayoutPassword: TextInputLayout
     private lateinit var textInputEditTextEmail: TextInputEditText
@@ -43,7 +40,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initViews() {
-        nestedScrollView = findViewById<View>(R.id.nestedScrollView) as NestedScrollView
         textInputLayoutEmail = findViewById<View>(R.id.textInputLayoutEmail) as TextInputLayout
         textInputLayoutPassword = findViewById<View>(R.id.textInputLayoutPassword) as TextInputLayout
         textInputEditTextEmail = findViewById<View>(R.id.textInputEditTextEmail) as TextInputEditText
@@ -94,9 +90,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 prefs[Constants.TOKEN] = response.get("token")
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-                emptyInputEditText()
-            } else {
-                Snackbar.make(nestedScrollView, getString(R.string.error_valid_email_password), Snackbar.LENGTH_LONG).show()
             }
         }
     }
