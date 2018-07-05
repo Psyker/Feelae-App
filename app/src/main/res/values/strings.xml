@@ -33,4 +33,9 @@
     <string name="un_m_decin_disponible">Un médecin disponible</string>
     <string name="x">X</string>
     <string name="appeller_mon_m_decin">Appeller mon médecin</string>
+    <string name="speciality">speciality</string>
+    <string name="annuler">annuler</string>
+    <string name="suivant">Suivant</string>
+    <string name="quel_est_le_motif_de_votre_appel">Quel est le motif de votre appel ?</string>
+    <string name="veuillez_choisir_le_motif_de_votre_appel_afin_que_nous_vous_mettions_en_relations_avec_un_sp_cialiste_disponible">Veuillez choisir le motif de votre appel afin que nous vous mettions en relations avec un spécialiste disponible</string>
 </resources>
