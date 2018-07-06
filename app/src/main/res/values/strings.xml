@@ -42,4 +42,6 @@
     <string name="veuillez_utliser_la_bare_de_recherche_pour_ajouter_un_symptome">Veuillez utliser la bare de recherche pour ajouter un symptome</string>
     <string name="mal_de_t_te_jambe">Mal de tête, jambe, etc…</string>
     <string name="terminer">terminer</string>
+    <string name="estimated_time">Temps d\'attente estimé : 2 minutes</string>
+    <string name="doctor_name">Dr Henry Fake</string>
 </resources>

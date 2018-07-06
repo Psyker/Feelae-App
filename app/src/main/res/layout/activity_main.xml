@@ -45,6 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="@string/add_psy_text"
+                    android:fontFamily="@font/roboto_medium"
                     android:textAlignment="center"
                     android:textColor="@color/mediumBlue"
                     android:textStyle="bold" />
@@ -70,6 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="@string/monitoring_button"
+                    android:fontFamily="@font/roboto_medium"
                     android:textAlignment="center"
                     android:textColor="@color/mediumBlue"
                     android:textStyle="bold" />
@@ -96,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="@string/profile_button"
+                    android:fontFamily="@font/roboto_medium"
                     android:textAlignment="center"
                     android:textColor="@color/mediumBlue"
                     android:textStyle="bold" />

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundx2"
     tools:context=".activities.WaitingRoomActivity">
 
     <FrameLayout
@@ -15,18 +16,19 @@
 
     <Button
         android:id="@+id/waiting_room_cancel_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_rounded"
+        android:backgroundTint="@color/bluePrimary"
+        android:fontFamily="@font/roboto_medium"
         android:text="@string/waiting_room_cancel_button_text"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -34,33 +36,57 @@
 
         <TextView
             android:id="@+id/waiting_text"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="32dp"
             android:layout_weight="1"
-            android:text="TextView"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Chargement ..."
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.daprlabs.aaron.swipedeck.layouts.SwipeFrameLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/estimated_time"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/waiting_text" />
+
+        <com.daprlabs.aaron.swipedeck.layouts.SwipeFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/swipeLayout"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="88dp"
+            android:orientation="vertical"
+            swipedeck:layout_constraintBottom_toBottomOf="parent"
+            swipedeck:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
 
             <com.daprlabs.aaron.swipedeck.SwipeDeck
                 android:id="@+id/swipe_deck"
                 android:layout_width="match_parent"
-                android:layout_height="480dp"
+                android:layout_height="450dp"
                 android:padding="50dp"
-                swipedeck:max_visible="3"
                 swipedeck:card_spacing="15dp"
-                swipedeck:swipe_enabled="true"/>
+                swipedeck:max_visible="3"
+                swipedeck:swipe_enabled="true" />
 
         </com.daprlabs.aaron.swipedeck.layouts.SwipeFrameLayout>
 

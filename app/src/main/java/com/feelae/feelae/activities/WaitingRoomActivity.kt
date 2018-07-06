@@ -57,6 +57,7 @@ class WaitingRoomActivity : AppCompatActivity() {
             val adapter = SwipeDeckAdapter(hints, this)
             cardStack.setAdapter(adapter)
             hideLoader()
+            redirectToCallPageAfterDelay()
         }
     }
 
@@ -79,11 +80,10 @@ class WaitingRoomActivity : AppCompatActivity() {
         val service = ServiceVolley()
         val apiController = APIController(service)
         apiController.get("doctor/$specialization", null) { response ->
-            Log.d("CACACACACA", response.toString())
             if (response != null) {
                 val result = Klaxon().parseArray<Doctor>(response.toString())
                 val doctors = ArrayList(result).map{ it.firstname + " " + it.lastname }
-                textViewWaitingRoom.text = "Dr. ${doctors[0]}"
+                textViewWaitingRoom.text = "Dr. ${doctors[0]} arrive dans un instant"
             }
         }
     }

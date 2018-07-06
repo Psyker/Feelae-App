@@ -8,6 +8,7 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import com.beust.klaxon.Klaxon
 import com.feelae.feelae.R
+import com.feelae.feelae.fragments.LoaderFragment
 import com.feelae.feelae.helpers.PreferenceHelper
 import com.feelae.feelae.models.SpecializationItem
 import com.feelae.feelae.models.Specialization
@@ -19,6 +20,9 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter.items
 import kotlinx.android.synthetic.main.activity_specialization_list.*
 
 class SpecializationListActivity : AppCompatActivity() {
+    private val loaderFragment: LoaderFragment by lazy {
+        LoaderFragment()
+    }
     private lateinit var prefs: SharedPreferences
     private lateinit var mSelectedSpecialization: String
     private lateinit var mFastAdapter: FastAdapter<SpecializationItem>
@@ -27,6 +31,7 @@ class SpecializationListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_specialization_list)
+        showLoader()
         prefs = PreferenceHelper.defaultPrefs(this)
         mItemAdapter = items()
         specialization_list_next_button.isEnabled = false
@@ -73,7 +78,16 @@ class SpecializationListActivity : AppCompatActivity() {
                     }
                 }
                 mItemAdapter.add(result.map { SpecializationItem(it) })
+                hideLoader()
             }
         }
+    }
+
+    private fun showLoader() {
+        supportFragmentManager.beginTransaction().add(R.id.loader_container_layout, loaderFragment).commit()
+    }
+
+    private fun hideLoader() {
+        supportFragmentManager.beginTransaction().remove(loaderFragment).commit()
     }
 }
