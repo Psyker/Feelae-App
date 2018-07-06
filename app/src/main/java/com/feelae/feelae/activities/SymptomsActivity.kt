@@ -60,7 +60,6 @@ class SymptomsActivity : AppCompatActivity() {
                 mSymptomNames =  ArrayList(result).map{ it.name }
                 val adapter = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, mSymptomNames)
                 multiAutoCompleteTextView.setAdapter(adapter)
-                Log.d("Symptomes", mSymptomNames[0])
                 multiAutoCompleteTextView.setTokenizer(MultiAutoCompleteTextView.CommaTokenizer())
             }
         }

@@ -43,6 +43,7 @@
                 android:layout_marginBottom="10dp"
                 android:text="@string/quel_est_le_motif_de_votre_appel"
                 android:textAlignment="center"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -51,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="18dp"
+                android:fontFamily="@font/roboto_medium"
                 android:text="@string/veuillez_choisir_le_motif_de_votre_appel_afin_que_nous_vous_mettions_en_relations_avec_un_sp_cialiste_disponible" />
 
             <android.support.v7.widget.RecyclerView
@@ -72,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
                 android:background="@android:color/transparent"
                 android:text="@string/annuler" />
 
@@ -79,6 +82,7 @@
                 android:id="@+id/specialization_list_next_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
                 android:layout_weight="1"
                 android:background="@drawable/btn_rounded"
                 android:backgroundTint="@color/bluePrimary"

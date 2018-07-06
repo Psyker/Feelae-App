@@ -136,7 +136,7 @@
             android:id="@+id/textInputEditTextConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_font"
+            android:fontFamily="@font/roboto_medium"
             android:hint="@string/hint_confirm_password"
             android:inputType="textPassword"
             android:textSize="14sp" />
@@ -151,7 +151,7 @@
         android:layout_marginStart="8dp"
         android:background="@drawable/btn_rounded"
         android:backgroundTint="@color/bluePrimary"
-        android:fontFamily="@font/roboto_font"
+        android:fontFamily="@font/roboto_medium"
         android:text="@string/text_register"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"

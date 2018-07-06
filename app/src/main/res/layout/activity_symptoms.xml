@@ -41,6 +41,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/quels_sont_vos_symptomes"
                 android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="parent"
@@ -52,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="35dp"
                 android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto_medium"
                 android:text="@string/veuillez_utliser_la_bare_de_recherche_pour_ajouter_un_symptome"
                 tools:layout_editor_absoluteX="26dp"
                 tools:layout_editor_absoluteY="123dp" />
@@ -85,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
                 android:background="@android:color/transparent"
                 android:text="@string/annuler"
                 app:layout_constraintBottom_toTopOf="@+id/symptoms_next_button" />
@@ -95,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
                 android:background="@drawable/btn_rounded"
                 android:backgroundTint="@color/bluePrimary"
                 android:text="@string/terminer"

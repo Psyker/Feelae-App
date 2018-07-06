@@ -7,6 +7,7 @@ import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.commons.utils.FastAdapterUIUtils
 import com.mikepenz.fastadapter.items.AbstractItem
 import com.mikepenz.materialize.util.UIUtils
+import kotlinx.android.synthetic.main.notification_template_lines_media.view.*
 import kotlinx.android.synthetic.main.specialization_item.view.*
 
 class SpecializationItem(val specialization: Specialization) : AbstractItem<SpecializationItem, SpecializationItem.SpecializationViewHolder>() {
