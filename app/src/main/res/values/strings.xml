@@ -5,6 +5,7 @@
     <string name="profile_button">Mon profil</string>
     <string name="monitoring_button">Mon suivi</string>
     <string name="waiting_room_cancel_button_text">Annuler</string>
+    <string name="waiting_room_doctor_text">Dr. %1$s arrive dans un instant</string>
     <string name="hint_name">Name</string>
     <string name="hint_email">ADRESSE EMAIL</string>
     <string name="hint_password">MOT DE PASSE</string>
@@ -12,7 +13,7 @@
     <string name="text_login">Se connecter</string>
     <string name="text_register">S\'enregistrer</string>
     <string name="error_message_email">Entrer un email valide</string>
-    <string name="error_message_name">Entrer un email valide</string>
+    <string name="error_message_name">Entrer un nom</string>
     <string name="error_message_password">Entrer un mot de passe</string>
     <string name="success_message">Registration Successful</string>
     <string name="text_not_member">No account yet? Create one</string>

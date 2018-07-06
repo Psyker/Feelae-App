@@ -21,6 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.447"
         app:srcCompat="@drawable/logo_bleu" />
 
     <android.support.design.widget.TextInputLayout
@@ -29,16 +30,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/roboto_medium"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/roboto_medium"
         app:layout_constraintBottom_toTopOf="@+id/appCompatButtonLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/textInputEditTextEmail"
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
@@ -61,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/textInputEditTextPassword"
+            android:id="@+id/passwordInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
@@ -71,7 +72,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/appCompatButtonLogin"
+        android:id="@+id/loginButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"

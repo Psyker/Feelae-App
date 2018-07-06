@@ -35,7 +35,6 @@ class SpecializationItem(val specialization: Specialization) : AbstractItem<Spec
             itemView.specialization_text.text = specialization?.name
             val image = specialization!!.image
             itemView.specialization_image.setImageResource(image!!)
-
         }
     }
 }

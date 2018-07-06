@@ -83,7 +83,7 @@ class WaitingRoomActivity : AppCompatActivity() {
             if (response != null) {
                 val result = Klaxon().parseArray<Doctor>(response.toString())
                 val doctors = ArrayList(result).map{ it.firstname + " " + it.lastname }
-                textViewWaitingRoom.text = "Dr. ${doctors[0]} arrive dans un instant"
+                textViewWaitingRoom.text = resources.getString(R.string.waiting_room_doctor_text, doctors[0])
             }
         }
     }

@@ -65,7 +65,7 @@ class SpecializationListActivity : AppCompatActivity() {
         apiController.get("specializations", prefs.getString("token", null)) { response ->
             if (response != null) {
                 val result = Klaxon().parseArray<Specialization>(response.toString())
-                result!!.forEach { it ->
+                result?.forEach { it ->
                     when {
                         it.slug == "generaliste" -> it.image = R.drawable.ic_generaliste
                         it.slug == "gynecologie" -> it.image = R.drawable.ic_gynecologie
@@ -77,7 +77,7 @@ class SpecializationListActivity : AppCompatActivity() {
                         it.slug == "ophtamologie" -> it.image = R.drawable.ic_ophtalmologie
                     }
                 }
-                mItemAdapter.add(result.map { SpecializationItem(it) })
+                mItemAdapter.add(result?.map { SpecializationItem(it) })
                 hideLoader()
             }
         }
